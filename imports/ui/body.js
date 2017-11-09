@@ -6,6 +6,8 @@ import { Tasks } from '../api/tasks.js';
 
 import './task.js';
 import './body.html';
+import './customer-user-accounts.html'
+import './customer-user-accounts.js'
 
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
@@ -45,4 +47,8 @@ Template.body.events({
   'change .hide-completed input'(event, instance) {
     instance.state.set('hideCompleted', event.target.checked);
   },
+
+  'click .login-toggle': ()=> {
+    Session.set('nav-toggle', 'open');
+  }
 });

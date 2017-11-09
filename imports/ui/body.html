@@ -8,7 +8,12 @@
         Hide Completed Tasks
       </label>
 
-      {{> loginButtons}}
+      {{#if currentUser}}
+      {{> logoutForm}}
+      {{else}}
+      {{> loginForm}}
+      {{> signupForm}}
+      {{/if}}
 
       {{#if currentUser}}
         <form class="new-task">
