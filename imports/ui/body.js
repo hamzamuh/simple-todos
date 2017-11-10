@@ -8,6 +8,8 @@ import './task.js';
 import './body.html';
 import './customer-user-accounts.html'
 import './customer-user-accounts.js'
+import './dropdown.html'
+import './dropdown.js'
 
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();

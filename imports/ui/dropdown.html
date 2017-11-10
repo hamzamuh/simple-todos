@@ -1,0 +1,9 @@
+<template name="dropdown_menu">
+
+<select id="category-select">
+    <option disabled="disabled" selected="selected">User Dropdown</option>
+    {{#each categories}}
+        <option value="{{this}}">{{this}}</option>
+    {{/each}}
+</select>
+</template>
